@@ -1,0 +1,8 @@
+<div>
+  <div ng-repeat="(key,value) in productCategory | groupBy : 'category'">
+    {{key}}
+    <div ng-repeat="product in value | filter:productServiceData.searchText:'true'">
+      <div ng-hide="productServiceData.showInStock && !product.stocked">{{product.name}}  {{product.price}}</div>
+    </div>
+  </div>
+</div>

@@ -4,7 +4,8 @@ app.factory("productCategoryService", ["$http", function($http) {
   var productCategoryService = {
     data: {
       products: [],
-      isSelected: false
+      showInStock: false,
+      searchText: {}
     },
     getCategory: function() {
       return $http.get('product-data.json').success(function(data) {
