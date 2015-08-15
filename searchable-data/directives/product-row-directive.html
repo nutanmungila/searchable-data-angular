@@ -1,0 +1,8 @@
+<div>
+  <div ng-repeat="(key,value) in productCategory | groupBy : 'category'">
+    {{key}}
+    <div ng-repeat="product in value">
+      <div ng-hide="productServiceData.isSelected && !product.stocked">{{product.name}} {{product.price}}</div>
+    </div>
+  </div>
+</div>

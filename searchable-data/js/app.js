@@ -1,1 +1,1 @@
-angular.module("productCategoryApp", []);
+angular.module("productCategoryApp", ['angular.filter']);

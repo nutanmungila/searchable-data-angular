@@ -3,7 +3,8 @@ var app = angular.module("productCategoryApp");
 app.factory("productCategoryService", ["$http", function($http) {
   var productCategoryService = {
     data: {
-      products: []
+      products: [],
+      isSelected: false
     },
     getCategory: function() {
       return $http.get('product-data.json').success(function(data) {
